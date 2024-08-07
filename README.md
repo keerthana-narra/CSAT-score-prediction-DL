@@ -1,11 +1,11 @@
-#**Customer Satisfaction (CSAT) Prediction Model**
-##Overview
+# **Customer Satisfaction (CSAT) Prediction Model**
+## Overview
 This project focuses on predicting Customer Satisfaction (CSAT) scores using a Deep Learning Artificial Neural Network (ANN). The model is developed in the context of an e-commerce platform, aiming to understand and improve customer satisfaction through their interactions and feedback. By leveraging neural network model, we aim to accurately forecast CSAT scores based on various features, providing actionable insights for service improvement.
 
-##Project Background
+## Project Background
 Customer satisfaction in e-commerce is a critical metric influencing customer loyalty, repeat business, and word-of-mouth marketing. Traditionally, companies have relied on direct surveys to gauge customer satisfaction, which can be time-consuming and may not always capture the full spectrum of customer experiences. With the advent of deep learning, it's now possible to predict customer satisfaction scores in real-time, offering a granular view of service performance and identifying areas for immediate improvement.
 
-##Dataset Overview
+## Dataset Overview
 The dataset encompasses customer satisfaction scores over a one-month period on an e-commerce platform named "Shopzilla." It consists of the following features:
 
 Unique id: Unique identifier for each record (integer).
@@ -29,15 +29,14 @@ Tenure Bucket: Bucket categorizing agent tenure (object/string).
 Agent Shift: Shift timing of the agent (object/string).
 CSAT Score: Customer Satisfaction (CSAT) score (integer).
 
-**##Steps Involved**
+## **Steps Involved**
 **1. Data Preparation**
 Cleaning: Handle missing values, remove duplicates, and address inconsistencies in the dataset.
-Normalization: Standardize numerical features to ensure uniformity in the input data.
-Encoding: Convert categorical variables into numerical values using techniques like one-hot encoding or label encoding.
-**2. Feature Engineering**
+Encoding: Convert categorical variables into numerical values using techniques like one-hot encoding and target encoding.
+**2. Feature Engineering & Data Transformation**
 Interaction Timing: Calculate the time differences between various timestamps to create new features related to interaction speed.
 Text Analysis: Perform sentiment analysis on customer remarks to extract sentiment scores as features.
-Aggregate Features: Create aggregate features such as average handling time by agent, total interactions per channel, etc.
+Normalization: Normalize numerical features to ensure uniformity in the input data.
 **3. Model Development & Evaluation**
 Initial implementation :
 ![image](https://github.com/user-attachments/assets/1f732706-e37f-4e77-b0be-ae4ab47495b6)
@@ -49,5 +48,6 @@ Hyperparameter tuning and selecting the best model :
 Using best model, resulted in accuracy of 72%
 
 **5.Insights**
+
 **6.Conclusion**
 
