@@ -111,10 +111,13 @@ A deep learning model was developed to predict CSAT scores based on the prepared
   The Adam optimizer was used with a learning rate that was fine-tuned through hyperparameter tuning. Early stopping was implemented to prevent overfitting, ensuring that the model retained the best weights during training.
 
 ### Hyperparameter Tuning:
-- **Randomized Search:**  
-  A RandomizedSearchCV approach was employed to optimize key hyperparameters, including the number of neurons, dropout rate, batch size, epochs, and learning rate. This process identified the best combination of parameters that led to the highest model accuracy.
+- **Randomized Search:**
+  A RandomizedSearchCV approach was employed to optimize key hyperparameters, including the number of neurons, dropout rate, batch size, epochs, and learning rate. This approach helped in exploring a wide range of hyperparameters efficiently.
 
-- **Model Evaluation:**  
+- **Keras Tuner:**
+  Additionally, Keras Tuner was utilized to further refine the hyperparameter optimization process. Keras Tuner provides advanced search algorithms like RandomSearch, Hyperband, and BayesianOptimization to systematically explore hyperparameter space. By integrating Keras Tuner, the process identified the optimal combination of parameters that resulted in the highest model accuracy. This tool enabled fine-grained control over the tuning process and facilitated the discovery of improved hyperparameter configurations beyond initial random search.
+
+### Model Evaluation:  
   The model’s performance was evaluated using metrics like mean squared error and mean absolute error. The distribution of the differences between actual and predicted CSAT scores was analyzed to understand the model's accuracy and identify areas for improvement.
 
 ---
