@@ -92,7 +92,9 @@ def real_time_predict(input_data):
     best_model = load_model('models_saved/best_model.h5')
     
     # Predict with the best model
-    y_pred = best_model.predict(input_data)
+    # verbose=0 avoids Keras printing a unicode progress bar, which crashes
+    # on Windows consoles using the cp1252 codepage
+    y_pred = best_model.predict(input_data, verbose=0)
     
     # Reverse scale y_pred value to get the actual CSAT score
     min_y, max_y = 1, 5  
